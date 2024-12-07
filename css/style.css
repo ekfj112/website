@@ -1,0 +1,409 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Убедимся, что тело страницы занимает всю высоту окна */
+    background: linear-gradient(120deg, #f0f0f0 0%, #c9c5c4 100%); /* Плавный фон */
+    background-size: cover;
+}
+
+header {
+    background-color: #282c34;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding: 0;
+    margin: 1em 0 0;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ddd;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+    width: 100%;
+}
+
+main {
+    flex: 1; /* Основное содержимое растягивается, чтобы заполнить оставшееся пространство */
+    padding: 2em;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+
+.contact-form-section h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #888;
+}
+
+button {
+    background-color: #282c34;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #444;
+}
+
+footer {
+    background-color: #282c34;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    margin-top: auto;
+}
+
+/* Основная секция с фото и текстом */
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.intro-content {
+    max-width: 800px;
+    text-align: center;
+}
+
+.rahmaninov-photo {
+    max-width: 400px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.legacy {
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.legacy h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.legacy p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.works {
+    padding: 20px;
+    text-align: center;
+}
+
+.works h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.works-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.work-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.work-item h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.work-item p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.work-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.work-item audio {
+    display: block;
+    margin-top: 10px;
+    width: 100%; /* Плеер растягивается на ширину карточки */
+    max-width: 300px;
+    outline: none;
+}
+
+.events {
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.events h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.event-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Адаптивная сетка для изображений */
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.event-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    cursor: pointer; /* Появление указателя мыши */
+}
+
+.event-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.event-item h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.event-item p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.event-photo {
+    max-width: 100%;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 0.5em 0;
+    }
+}
+
+.timeline {
+    margin: 2em auto;
+    max-width: 800px;
+    position: relative;
+}
+
+.timeline-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 2em 0;
+    border-top: 2px solid #333;
+    border-bottom: 2px solid #333;
+}
+
+.timeline-line {
+    position: absolute;
+    top: 50%;  /* Линия будет в центре */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    z-index: 1; /* Линия будет на заднем плане */
+}
+
+.timeline-year {
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    z-index: 2; /* Годы будут отображаться поверх линии */
+}
+
+.timeline-year span {
+    display: inline-block;
+    padding: 0.5em 1em;
+    background-color: #333;
+    color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.timeline-year span:hover {
+    transform: scale(1.2);
+}
+/* Тултип */
+#timeline-tooltip {
+    position: fixed;
+    top: 80px; /* Над центром временной линии */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    z-index: 100;
+    pointer-events: none;
+    max-width: 300px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Показ тултипа */
+#timeline-tooltip.visible {
+    opacity: 1;
+}
+
+/* Адаптация для мобильных экранов */
+@media (max-width: 768px) {
+    #timeline-tooltip {
+        max-width: 200px;
+        font-size: 12px;
+    }
+    .detail-content {
+        font-size: 14px;
+    }
+}
+
+/* Подробности (модал) */
+#timeline-details {
+    position: relative;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-top: 2px solid #ccc;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#timeline-details.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.detail-content {
+    font-size: 16px;
+    line-height: 1.5;
+}
+.detail-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
