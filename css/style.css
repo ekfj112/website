@@ -304,8 +304,7 @@ footer {
     position: absolute;
     top: 50%;  /* Линия будет в центре */
     left: 0;
-    width: 100%;
-    height: 2px;
+    width: 2px;
     background-color: #333;
     z-index: 1; /* Линия будет на заднем плане */
 }
@@ -370,6 +369,16 @@ footer {
 
     .timeline-year {
         margin-bottom: 15px; /* More space for smaller screens */
+    }
+    .timeline-line {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background-color: #333;
+        height: 100%;
+        transform: translateX(-50%);
     }
 }
 
