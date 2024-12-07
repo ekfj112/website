@@ -132,7 +132,7 @@ footer {
 }
 
 .intro-content {
-    max-width: 800px;
+    max-width: 100%;
     text-align: center;
 }
 
@@ -286,13 +286,14 @@ footer {
 
 .timeline {
     margin: 2em auto;
-    max-width: 800px;
+    max-width: 100%;
     position: relative;
 }
 
 .timeline-container {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
     position: relative;
     padding: 2em 0;
     border-top: 2px solid #333;
@@ -313,6 +314,7 @@ footer {
     position: relative;
     text-align: center;
     cursor: pointer;
+    margin-bottom: 10px;
     z-index: 2; /* Годы будут отображаться поверх линии */
 }
 
@@ -361,6 +363,13 @@ footer {
     }
     .detail-content {
         font-size: 14px;
+    }
+    .timeline-container {
+        flex-direction: column; /* Stacks items vertically */
+    }
+
+    .timeline-year {
+        margin-bottom: 15px; /* More space for smaller screens */
     }
 }
 
