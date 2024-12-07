@@ -307,6 +307,8 @@ footer {
     width: 2px;
     background-color: #333;
     z-index: 1; /* Линия будет на заднем плане */
+    height: 100%;
+    transform: translateY(-50%);
 }
 
 .timeline-year {
@@ -329,6 +331,38 @@ footer {
 .timeline-year span:hover {
     transform: scale(1.2);
 }
+
+@media (max-width: 768px) {
+    #timeline-tooltip {
+        max-width: 200px;
+        font-size: 12px;
+    }
+
+    .detail-content {
+        font-size: 14px;
+    }
+
+    .timeline-container {
+        flex-direction: column; /* Stacks items vertically */
+    }
+
+    .timeline-year {
+        margin-bottom: 15px; /* More space for smaller screens */
+    }
+
+    .timeline-line {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background-color: #333;
+        height: 100%;
+        transform: translateX(-50%);
+    }
+}
+
+
 /* Тултип */
 #timeline-tooltip {
     position: fixed;
@@ -352,34 +386,6 @@ footer {
 /* Показ тултипа */
 #timeline-tooltip.visible {
     opacity: 1;
-}
-
-/* Адаптация для мобильных экранов */
-@media (max-width: 768px) {
-    #timeline-tooltip {
-        max-width: 200px;
-        font-size: 12px;
-    }
-    .detail-content {
-        font-size: 14px;
-    }
-    .timeline-container {
-        flex-direction: column; /* Stacks items vertically */
-    }
-
-    .timeline-year {
-        margin-bottom: 15px; /* More space for smaller screens */
-    }
-    .timeline-line {
-        position: absolute;
-        left: 50%;
-        top: 0;
-        bottom: 0;
-        width: 2px;
-        background-color: #333;
-        height: 100%;
-        transform: translateX(-50%);
-    }
 }
 
 /* Подробности (модал) */
