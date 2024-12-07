@@ -293,7 +293,7 @@ footer {
 .timeline-container {
     display: flex;
     justify-content: space-between;
-    flex-direction: column;
+    flex-direction: row;
     position: relative;
     padding: 2em 0;
     border-top: 2px solid #333;
@@ -302,13 +302,13 @@ footer {
 
 .timeline-line {
     position: absolute;
-    top: 50%;  /* Линия будет в центре */
-    left: 0;
+    top: 0;
+    bottom: 0;
+    left: 50%; /* Center the line horizontally */
     width: 2px;
     background-color: #333;
-    z-index: 1; /* Линия будет на заднем плане */
-    height: 100%;
-    transform: translateY(-50%);
+    z-index: 1;
+    transform: translateX(-50%);
 }
 
 .timeline-year {
